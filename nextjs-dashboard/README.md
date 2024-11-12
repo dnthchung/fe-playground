@@ -15,3 +15,7 @@ pnpm dev
 ```
 
 These commands will install the project's packages and then start the development server on port 3000.
+
+```bash
+pnpm i @vercel/postgres
+```
