@@ -23,7 +23,7 @@ const checkEnvVariables = () => {
         ", "
       )}`
     );
-    process.exit(1); // Exit the process with an error code
+    process.exit(1);
   }
 };
 
@@ -51,7 +51,7 @@ const checkAndCreateDatabase = async () => {
       console.log(`Database "${databaseName}" already exists.`);
     } else {
       console.error("Error creating database:", err);
-      process.exit(1); // Exit the process if there's an error
+      process.exit(1);
     }
   }
 };

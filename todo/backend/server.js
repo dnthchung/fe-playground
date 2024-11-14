@@ -15,7 +15,7 @@ const startServer = async () => {
 
   // Basic route
   app.get("/", (req, res) => {
-    res.send("Hello, World!");
+    res.json({ message: "Hello, world!" });
   });
 
   // Start listening

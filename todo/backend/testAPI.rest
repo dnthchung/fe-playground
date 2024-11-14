@@ -1,7 +1,7 @@
 ###rest client 
 
 ###
-GET http://localhost:3000/test
+GET http://localhost:3000/
 
 ### post
 
