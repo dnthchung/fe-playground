@@ -1,0 +1,14 @@
+###rest client 
+
+###
+GET http://localhost:3000/test
+
+### post
+
+POST http://localhost:3000/schools
+CONTENT-TYPE: application/json
+
+{
+  "name": "Trường ABC",
+  "address": "123 Đường XYZ"
+}
