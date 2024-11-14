@@ -22,18 +22,30 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  function handleSearch(myTerm: string) {
-    // console.log(`Searching... ${myTerm}`);
-    //lấy ra input người dùng từ trên url
-    const myParams = new URLSearchParams(searchParams);
-    if (myTerm) {
-      myParams.set("query", myTerm);
+  // function handleSearch(myTerm: string) {
+  //   // console.log(`Searching... ${myTerm}`);
+  //   //lấy ra input người dùng từ trên url
+  //   const myParams = new URLSearchParams(searchParams);
+  //   myParams.set("page", "1");
+  //   if (myTerm) {
+  //     myParams.set("query", myTerm);
+  //   } else {
+  //     myParams.delete("query");
+  //   }
+  //   // Update the URL with the new search params
+  //   replace(`${pathname}?${myParams.toString()}`);
+  // }
+
+  const handleSearch = useDebouncedCallback((term) => {
+    const params = new URLSearchParams(searchParams);
+    params.set("page", "1");
+    if (term) {
+      params.set("query", term);
     } else {
-      myParams.delete("query");
+      params.delete("query");
     }
-    // Update the URL with the new search params
-    replace(`${pathname}?${myParams.toString()}`);
-  }
+    replace(`${pathname}?${params.toString()}`);
+  }, 300);
 
   return (
     <div className="relative flex flex-1 flex-shrink-0">
