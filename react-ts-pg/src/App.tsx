@@ -4,10 +4,12 @@ export default function App() {
     <>
       <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
         <Button
-          backgroundColor="bg-red-500 hover:bg-red-700"
-          text="Button"
-          fontSize={20}
-          pillShape={true}
+          myStyle={{
+            backgroundColor: "red",
+            // text: "Button 1",
+            fontSize: 16,
+            // pillShape: true,
+          }}
         />
       </div>
     </>
