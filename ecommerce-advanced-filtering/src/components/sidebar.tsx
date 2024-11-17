@@ -1,3 +1,4 @@
+// path : src/components/sidebar.tsx
 import { useState, useEffect } from "react";
 import { useFilter } from "./filterContext";
 
@@ -66,7 +67,6 @@ export default function Sidebar() {
       <section>
         {/* search section */}
         <input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} type="text" className="border-2 rounded px-2 sm:mb-0" placeholder="Search Product" />
-
         <div className="flex justify-center items-center">
           {/* min */}
           <input value={minPrice ?? ""} onChange={handleMinPriceChange} type="text" className="border-2 mr-2 px-5 py-3 mb-3 w-full" placeholder="Min" />
@@ -78,24 +78,28 @@ export default function Sidebar() {
         <div className="mb-5">
           <h2 className="text-xl font-semibold mb-3">Categories</h2>
         </div>
+
         {/* radio button */}
-        {categories.map((category, index) => (
-          <label key={index} className="block mb-2">
-            <input checked={selectedCategory === category} onChange={() => handleRadioChangeCategories(category)} type="radio" name="category" value={category} className="mr-2 w-[16px] h-[16px] " />
-            {category.toUpperCase()}
-          </label>
-        ))}
+        <section>
+          {categories.map((category, index) => (
+            <label key={index} className="block mb-2">
+              <input value={category} onChange={handleRadioChangeCategories(category)} checked={selectedCategory === category} type="radio" name="category" className="mr-2 w-[16px] h-[16px]" />
+              {category.toUpperCase()}
+            </label>
+          ))}
+        </section>
 
         {/* keywords section */}
         <div className="mb-5">
           <h2 className="text-xl font-semibold mb-3">Keywords</h2>
         </div>
-        {keywords.map((keyword, index) => (
-          <button key={index} onClick={() => handleKeywordClick(keyword)} className="block mb-2 px-4 py-2 w-full text-left border rounded hover:bg-gray-200">
-            {keyword.toUpperCase()}
-          </button>
-        ))}
-
+        <section>
+          {keywords.map((keyword, index) => (
+            <button key={index} onClick={() => handleKeywordClick(keyword)} className="block mb-2 px-4 py-2 w-full text-left border rounded hover:bg-gray-200">
+              {keyword.toUpperCase()}
+            </button>
+          ))}
+        </section>
         <button onClick={handleResetFilters} className="w-full mb-[4rem] py-2 bg-black text-white rounded mt-5">
           Reset Filters
         </button>
