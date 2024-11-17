@@ -1,3 +1,10 @@
+import { BrowserRouter as Router } from "react-router-dom";
+import Sidebar from "./components/sidebar";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <Router future={{ v7_startTransition: true }}>
+      <Sidebar />
+    </Router>
+  );
 }
