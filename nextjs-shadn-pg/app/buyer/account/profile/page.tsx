@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Address() {
-  return <div> address </div>;
+export default function Profile() {
+  return <div> Profile </div>;
 }
