@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div>
       {/* <Login /> */}
-      <p>Hello, world!</p>
+      <p className="text-3xl font-bold underline">Hello world!</p>
     </div>
   );
 }
