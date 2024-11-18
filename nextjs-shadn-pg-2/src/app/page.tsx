@@ -1,10 +1,14 @@
-import { Button } from "@/components/ui/button";
+//path : src/app/page.tsx
+
+import { ModeToggle } from "@/components";
 
 export default function Home() {
   return (
     <>
-      <Button>Click me</Button>
-      <p className=" font-bold underline">Hello world!</p>
+      <div className="flex items-center justify-center h-screen">
+        {/* <p className=" font-bold underline">Hello world!</p> */}
+        <ModeToggle />
+      </div>
     </>
   );
 }
