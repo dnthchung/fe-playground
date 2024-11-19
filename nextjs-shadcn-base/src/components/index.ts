@@ -1,5 +1,4 @@
 //Features
-export { ModeToggle } from "@/components/features/theme-mode-toggle2";
 export * from "@/components/features/theme-mode-toggle";
 export * from "@/components/features/theme-color-toggle";
 
