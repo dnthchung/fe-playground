@@ -2,9 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Input } from "@/components/shadn/ui/input";
-import { Label } from "@/components/shadn/ui/label";
-import { Button } from "@/components/shadn/ui/button";
+
+import { Button, Label, Input } from "@/components";
 import { EyeClosed as EyeClosedIcon, Eye as EyeOpenIcon } from "lucide-react";
 
 export default function Register() {
