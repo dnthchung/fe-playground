@@ -3,27 +3,27 @@ export { ModeToggle } from "@/components/features/theme-mode-toggle";
 
 //Widget - loading ...
 
-//Shadn - Ui
-export { Button } from "./shadn/ui/button";
-export { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./shadn/ui/dropdown-menu";
-export { Input } from "./shadn/ui/input";
-export { Label } from "./shadn/ui/label";
-export * from "./shadn/ui/hover-card";
-export * from "./shadn/ui/form";
-export * from "./shadn/ui/checkbox";
-export * from "./shadn/ui/radio-group";
-export * from "./shadn/ui/select";
-export * from "./shadn/ui/tabs";
-export * from "./shadn/ui/tooltip";
-export * from "./shadn/ui/switch";
-export * from "./shadn/ui/textarea";
-export * from "./shadn/ui/progress";
-export * from "./shadn/ui/avatar";
+//shadcn - Ui
+export { Button } from "./shadcn/ui/button";
+export { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./shadcn/ui/dropdown-menu";
+export { Input } from "./shadcn/ui/input";
+export { Label } from "./shadcn/ui/label";
+export * from "./shadcn/ui/hover-card";
+export * from "./shadcn/ui/form";
+export * from "./shadcn/ui/checkbox";
+export * from "./shadcn/ui/radio-group";
+export * from "./shadcn/ui/select";
+export * from "./shadcn/ui/tabs";
+export * from "./shadcn/ui/tooltip";
+export * from "./shadcn/ui/switch";
+export * from "./shadcn/ui/textarea";
+export * from "./shadcn/ui/progress";
+export * from "./shadcn/ui/avatar";
 
 // ============================== Thay vì ==============================
-// import { Button } from "@/components/shadn/ui/button";
-// import { Input } from "@/components/shadn/ui/input";
-// import { Label } from "@/components/shadn/ui/label";
+// import { Button } from "@/components/shadcn/ui/button";
+// import { Input } from "@/components/shadcn/ui/input";
+// import { Label } from "@/components/shadcn/ui/label";
 
 // ============================== Bây giờ ==============================
 // import { Button, Input, Label } from "@/components";
