@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import ThemeDataProvider from "@/context/theme-data-provider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,16 +20,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={inter.className}>
-        <ThemeProvider
-          //wanna add more theme like orange, blue .. ? (must have "light", "dark")
-          themes={["light", "dark", "orange"]}
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <ThemeDataProvider>{children}</ThemeDataProvider>
+        </NextThemesProvider>
       </body>
     </html>
   );
