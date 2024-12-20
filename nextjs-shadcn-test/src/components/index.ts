@@ -20,6 +20,7 @@ export * from "./shadcn/switch";
 export * from "./shadcn/textarea";
 export * from "./shadcn/progress";
 export * from "./shadcn/avatar";
+export * from "./shadcn/card";
 
 // ============================== Thay vì ==============================
 // import { Button } from "@/components/shadcn/ui/button";

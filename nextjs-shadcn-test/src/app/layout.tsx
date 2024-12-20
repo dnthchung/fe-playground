@@ -1,3 +1,5 @@
+//path : next-shadcn-test/src/app/layout.tsx
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
