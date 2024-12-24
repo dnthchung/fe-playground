@@ -18,15 +18,15 @@ export default function Todos() {
   const handleCreateTodoSubmit: SubmitHandler<Todo> = (data) => {
     createTodoMutation.mutate(data);
   };
-
   const handleMarkAsDoneSubmit = (data: Todo | undefined) => {
     if (data) {
       updateTodoMutation.mutate({ ...data, checked: true });
     }
   };
 
-  const handleDeleteTodo = (id: number) => {
-    deleteTodoMutation.mutate(id);
+  const handleDeleteTodo = async (id: number) => {
+    await deleteTodoMutation.mutateAsync(id);
+    console.log("Deleted todo with id:", id);
   };
 
   const { register, handleSubmit } = useForm<Todo>();
