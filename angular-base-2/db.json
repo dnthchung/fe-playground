@@ -52,9 +52,7 @@
         "barcode": "9164035109868",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
     },
     {
@@ -109,9 +107,7 @@
         "barcode": "2817839095220",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
     },
     {
@@ -166,9 +162,7 @@
         "barcode": "0516267971277",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
     },
     {
@@ -223,9 +217,7 @@
         "barcode": "9444582199406",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
     },
     {
@@ -280,9 +272,7 @@
         "barcode": "3212847902461",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
     },
     {
@@ -926,9 +916,7 @@
         "barcode": "2517819903837",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Apple/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png"
     },
     {
@@ -982,9 +970,7 @@
         "barcode": "8335515097879",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/thumbnail.png"
     },
     {
@@ -1038,9 +1024,7 @@
         "barcode": "5503491330693",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/thumbnail.png"
     },
     {
@@ -1094,10 +1078,7 @@
         "barcode": "0966223559510",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/1.png",
-        "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/2.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/1.png", "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/2.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/thumbnail.png"
     },
     {
@@ -1151,9 +1132,7 @@
         "barcode": "6707669443381",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/thumbnail.png"
     },
     {
@@ -1207,9 +1186,7 @@
         "barcode": "2597004869708",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Cucumber/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Cucumber/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cucumber/thumbnail.png"
     },
     {
@@ -1263,9 +1240,7 @@
         "barcode": "7957222289508",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/thumbnail.png"
     },
     {
@@ -1319,9 +1294,7 @@
         "barcode": "7095702028776",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Eggs/thumbnail.png"
     },
     {
@@ -1375,9 +1348,7 @@
         "barcode": "4250692197342",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/thumbnail.png"
     },
     {
@@ -1431,9 +1402,7 @@
         "barcode": "7583442707568",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/thumbnail.png"
     },
     {
@@ -1487,9 +1456,7 @@
         "barcode": "8400326844874",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/thumbnail.png"
     },
     {
@@ -1543,9 +1510,7 @@
         "barcode": "0668665656044",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/thumbnail.png"
     },
     {
@@ -1658,9 +1623,7 @@
         "barcode": "8546824122355",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Juice/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Juice/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Juice/thumbnail.png"
     },
     {
@@ -1714,34 +1677,8 @@
         "barcode": "3325493172934",
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png"
-      ],
+      "images": ["https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png"],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png"
-    },
-    {
-      "title": "san pham moi",
-      "price": 2000,
-      "description": "mo ta",
-      "id": 31
-    },
-    {
-      "title": "dsdsdsds",
-      "price": 2000,
-      "description": "sdad",
-      "id": 32
-    },
-    {
-      "title": "them",
-      "price": 200,
-      "description": "moi",
-      "id": 33
-    },
-    {
-      "title": "dsdsd",
-      "price": 2323232,
-      "description": "23232323",
-      "id": 34
     }
   ],
   "users": []

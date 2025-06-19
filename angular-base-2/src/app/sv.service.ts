@@ -7,7 +7,7 @@ import { User } from "./interfaces/user"
   providedIn: "root",
 })
 export class SVService {
-  private baseUrl: string = "http://localhost:3000/"
+  private baseUrl: string = "http://localhost:3000"
   constructor(private http: HttpClient) {}
   register(data: User) {
     return this.http.post(`${this.baseUrl}/register`, data)

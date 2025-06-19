@@ -1,1 +1,23 @@
-<p>admin works!</p>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let myProduct of products">
+            <td>{{ myProduct.id }}</td>
+            <td>{{ myProduct.title }}</td>
+            <td>{{ myProduct.price }}</td>
+            <td>{{ myProduct.description }}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteProduct()">Delete</button>
+                <aa [routerLink]="['product-edit', myProduct.id]" class="btn btn-primary">Edit</aa>
+            </td>
+        </tr>
+    </tbody>
+</table>
