@@ -21,5 +21,11 @@ export class AdminComponent implements OnInit {
     })
   }
 
-  deleteProduct() {}
+  deleteProduct(id: string | number | undefined) {
+    if (confirm("Are you sure you want to delete this product?")) {
+      this.sv.removeProduct(id).subscribe(() => {
+        this.products = this.products.filter((p) => p.id !== id)
+      })
+    }
+  }
 }
