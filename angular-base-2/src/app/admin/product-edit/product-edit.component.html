@@ -1,1 +1,62 @@
-<p>product-edit works!</p>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white text-center">
+                    <h2 class="mb-0">Edit Product</h2>
+                </div>
+                <div class="card-body">
+                    <div *ngIf="isLoading" class="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">Loading product data...</p>
+                    </div>
+
+                    <form *ngIf="!isLoading" (submit)="handleSubmit()" [formGroup]="productForm">
+                        <!-- Title -->
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title" formControlName="title" />
+                            <div class="text-danger small mt-1"
+                                *ngIf="productForm.get('title')?.touched && productForm.get('title')?.errors">
+                                Title bắt buộc nhiều hơn 3 ký tự
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="price" formControlName="price" />
+                            <div class="text-danger small mt-1"
+                                *ngIf="productForm.get('price')?.touched && productForm.get('price')?.errors">
+                                Price phải là số lớn hơn 0
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" formControlName="description"
+                                rows="3"></textarea>
+                            <div class="text-danger small mt-1"
+                                *ngIf="productForm.get('description')?.touched && productForm.get('description')?.errors">
+                                Description bắt buộc nhiều hơn 10 ký tự
+                            </div>
+                        </div>
+
+                        <!-- Submit buttons -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success" [disabled]="productForm.invalid">
+                                Update Product
+                            </button>
+                            <a routerLink="/admin" class="btn btn-secondary">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
