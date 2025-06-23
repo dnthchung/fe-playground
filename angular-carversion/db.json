@@ -1,177 +1,567 @@
 {
-  "brands": [
-    {
-      "id": 1,
-      "name": "Toyota",
-      "logoUrl": "https://i.imgur.com/4a2y1tO.png",
-      "country": "Nhật Bản",
-      "foundedYear": 1937,
-      "description": "Toyota Motor Corporation là một nhà sản xuất ô tô đa quốc gia của Nhật Bản có trụ sở tại Toyota, Aichi, Nhật Bản. Toyota là nhà sản xuất ô tô lớn nhất thế giới vào năm 2022."
-    },
-    {
-      "id": 2,
-      "name": "Ford",
-      "logoUrl": "https://i.imgur.com/lRLiA5p.png",
-      "country": "Hoa Kỳ",
-      "foundedYear": 1903,
-      "description": "Ford Motor Company là một nhà sản xuất ô tô đa quốc gia của Mỹ, có trụ sở chính tại Dearborn, Michigan. Công ty được thành lập bởi Henry Ford và được hợp nhất vào ngày 16 tháng 6 năm 1903."
-    },
-    {
-      "id": 3,
-      "name": "VinFast",
-      "logoUrl": "https://i.imgur.com/u1s35bY.png",
-      "country": "Việt Nam",
-      "foundedYear": 2017,
-      "description": "VinFast là một công ty sản xuất ô tô và xe máy điện của Việt Nam được thành lập vào năm 2017 tại Hải Phòng, trực thuộc tập đoàn Vingroup. VinFast đang tiên phong trong cuộc cách mạng xe điện toàn cầu."
-    },
-    {
-      "id": 4,
-      "name": "Hyundai",
-      "logoUrl": "https://i.imgur.com/5D6Yd0C.png",
-      "country": "Hàn Quốc",
-      "foundedYear": 1967,
-      "description": "Hyundai Motor Company là một nhà sản xuất ô tô đa quốc gia của Hàn Quốc có trụ sở tại Seoul. Hyundai là một trong những thương hiệu ô tô phổ biến nhất tại Việt Nam với nhiều mẫu xe đa dạng."
-    }
-  ],
-  "cars": [
-    {
-      "id": 1,
-      "modelName": "Corolla Cross",
-      "brandId": 1,
-      "year": 2023,
-      "carType": "SUV",
-      "thumbnailUrl": "https://i.imgur.com/mANa7D7.png",
-      "images": ["https://i.imgur.com/mANa7D7.png", "https://i.imgur.com/sYvjUqR.png", "https://i.imgur.com/O8qG2vT.png"],
-      "description": "Toyota Corolla Cross là mẫu xe SUV đô thị cỡ nhỏ, kết hợp sự linh hoạt trong thành phố và không gian rộng rãi của một chiếc SUV. Xe nổi bật với thiết kế hiện đại, trang bị an toàn tiên tiến và phiên bản Hybrid tiết kiệm nhiên liệu.",
-      "specifications": {
-        "engine": "1.8L Xăng / 1.8L Hybrid",
-        "horsepower": "138 hp",
-        "torque": "172 Nm",
-        "transmission": "CVT",
-        "driveTrain": "Cầu trước (FWD)",
-        "dimensions": "4,460 x 1,825 x 1,620 mm",
-        "fuelConsumption": "7.6 L/100km (Máy xăng) - 4.2 L/100km (Hybrid)"
-      },
-      "price": {
-        "base": 760000000,
-        "currency": "VND"
-      }
-    },
-    {
-      "id": 2,
-      "modelName": "Ranger",
-      "brandId": 2,
-      "year": 2024,
-      "carType": "Bán tải (Pickup)",
-      "thumbnailUrl": "https://i.imgur.com/1BqjZc5.png",
-      "images": ["https://i.imgur.com/1BqjZc5.png", "https://i.imgur.com/qE9YfKJ.png"],
-      "description": "Ford Ranger, mệnh danh là 'Vua bán tải', là mẫu xe bán tải mạnh mẽ và đa dụng. Với thiết kế cơ bắp, khả năng vận hành vượt trội trên mọi địa hình và nội thất tiện nghi, Ranger là lựa chọn hàng đầu trong phân khúc.",
-      "specifications": {
-        "engine": "2.0L Single-Turbo / 2.0L Bi-Turbo Diesel",
-        "horsepower": "170 hp / 210 hp",
-        "torque": "405 Nm / 500 Nm",
-        "transmission": "Số sàn 6 cấp / Tự động 10 cấp",
-        "driveTrain": "Hai cầu (4x4)",
-        "dimensions": "5,362 x 1,918 x 1,875 mm",
-        "fuelConsumption": "8.5 L/100km"
-      },
-      "price": {
-        "base": 669000000,
-        "currency": "VND"
-      }
-    },
-    {
-      "id": 3,
-      "modelName": "VF 8",
-      "brandId": 3,
-      "year": 2023,
-      "carType": "SUV",
-      "thumbnailUrl": "https://i.imgur.com/w4J0G0B.png",
-      "images": ["https://i.imgur.com/w4J0G0B.png", "https://i.imgur.com/fH6T7gE.png"],
-      "description": "VinFast VF 8 là mẫu SUV điện thông minh toàn cầu, mang đến trải nghiệm lái xe điện cao cấp. Xe sở hữu thiết kế tương lai, công nghệ trợ lái tiên tiến (ADAS), và hiệu suất vận hành ấn tượng từ động cơ điện.",
-      "specifications": {
-        "engine": "Động cơ điện (1 hoặc 2 Motor)",
-        "horsepower": "201 hp (Eco) / 402 hp (Plus)",
-        "torque": "310 Nm / 620 Nm",
-        "transmission": "Tự động 1 cấp",
-        "driveTrain": "Cầu sau (RWD) / Hai cầu (AWD)",
-        "dimensions": "4,750 x 1,934 x 1,667 mm",
-        "range": "Lên đến 471 km / 1 lần sạc"
-      },
-      "price": {
-        "base": 1090000000,
-        "currency": "VND"
-      }
-    },
-    {
-      "id": 4,
-      "modelName": "Accent",
-      "brandId": 4,
-      "year": 2024,
-      "carType": "Sedan",
-      "thumbnailUrl": "https://i.imgur.com/zWk9N7k.png",
-      "images": ["https://i.imgur.com/zWk9N7k.png", "https://i.imgur.com/3p8YhF2.png"],
-      "description": "Hyundai Accent là mẫu sedan hạng B được ưa chuộng hàng đầu tại Việt Nam nhờ thiết kế trẻ trung, năng động, không gian nội thất rộng rãi và nhiều trang bị tiện nghi hiện đại trong tầm giá.",
-      "specifications": {
-        "engine": "1.5L Xăng Smartstream G",
-        "horsepower": "115 hp",
-        "torque": "144 Nm",
-        "transmission": "Số sàn 6 cấp / iVT",
-        "driveTrain": "Cầu trước (FWD)",
-        "dimensions": "4,535 x 1,765 x 1,485 mm",
-        "fuelConsumption": "6.2 L/100km"
-      },
-      "price": {
-        "base": 439000000,
-        "currency": "VND"
-      }
-    }
-  ],
   "users": [
     {
       "id": 1,
-      "email": "staff@carvision.com",
-      "username": "AdminVision",
-      "password": "hashed_password_for_staff",
-      "role": "staff"
+      "email": "admin@shop.co",
+      "username": "admin",
+      "password": "$2b$10$hashedpassword",
+      "firstName": "Shop",
+      "lastName": "Admin",
+      "role": "admin",
+      "avatar": "https://i.imgur.com/avatar1.jpg",
+      "phone": "+84123456789",
+      "address": {
+        "street": "123 Main Street",
+        "city": "Ho Chi Minh City",
+        "country": "Vietnam",
+        "zipCode": "70000"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "isActive": true
     },
     {
       "id": 2,
-      "email": "user@example.com",
-      "username": "BaoTranAuto",
-      "password": "hashed_password_for_user",
-      "role": "user"
+      "email": "john.doe@example.com",
+      "username": "johndoe",
+      "password": "$2b$10$hashedpassword",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "customer",
+      "avatar": "https://i.imgur.com/avatar2.jpg",
+      "phone": "+84987654321",
+      "address": {
+        "street": "456 Oak Avenue",
+        "city": "Hanoi",
+        "country": "Vietnam",
+        "zipCode": "10000"
+      },
+      "createdAt": "2024-02-15T10:30:00Z",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "email": "sarah.m@example.com",
+      "username": "sarahm",
+      "password": "$2b$10$hashedpassword",
+      "firstName": "Sarah",
+      "lastName": "Miller",
+      "role": "customer",
+      "avatar": "https://i.imgur.com/avatar3.jpg",
+      "phone": "+84912345678",
+      "address": {
+        "street": "789 Pine Street",
+        "city": "Da Nang",
+        "country": "Vietnam",
+        "zipCode": "50000"
+      },
+      "createdAt": "2024-03-20T14:22:00Z",
+      "isActive": true
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "T-shirts",
+      "slug": "t-shirts",
+      "description": "Comfortable and stylish t-shirts for everyday wear",
+      "image": "https://i.imgur.com/category-tshirts.jpg",
+      "parentId": null,
+      "isActive": true,
+      "sortOrder": 1
+    },
+    {
+      "id": 2,
+      "name": "Jeans",
+      "slug": "jeans",
+      "description": "Premium quality jeans in various fits and styles",
+      "image": "https://i.imgur.com/category-jeans.jpg",
+      "parentId": null,
+      "isActive": true,
+      "sortOrder": 2
+    },
+    {
+      "id": 3,
+      "name": "Shirts",
+      "slug": "shirts",
+      "description": "Elegant shirts for formal and casual occasions",
+      "image": "https://i.imgur.com/category-shirts.jpg",
+      "parentId": null,
+      "isActive": true,
+      "sortOrder": 3
+    },
+    {
+      "id": 4,
+      "name": "Shorts",
+      "slug": "shorts",
+      "description": "Comfortable shorts for summer and active wear",
+      "image": "https://i.imgur.com/category-shorts.jpg",
+      "parentId": null,
+      "isActive": true,
+      "sortOrder": 4
+    },
+    {
+      "id": 5,
+      "name": "Hoodies",
+      "slug": "hoodies",
+      "description": "Warm and cozy hoodies for cooler weather",
+      "image": "https://i.imgur.com/category-hoodies.jpg",
+      "parentId": null,
+      "isActive": true,
+      "sortOrder": 5
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "VERSACE",
+      "slug": "versace",
+      "logo": "https://i.imgur.com/versace-logo.png",
+      "description": "Luxury Italian fashion brand",
+      "website": "https://versace.com",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "ZARA",
+      "slug": "zara",
+      "logo": "https://i.imgur.com/zara-logo.png",
+      "description": "Spanish fast fashion retailer",
+      "website": "https://zara.com",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "name": "GUCCI",
+      "slug": "gucci",
+      "logo": "https://i.imgur.com/gucci-logo.png",
+      "description": "Italian luxury fashion house",
+      "website": "https://gucci.com",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "PRADA",
+      "slug": "prada",
+      "logo": "https://i.imgur.com/prada-logo.png",
+      "description": "Italian luxury fashion company",
+      "website": "https://prada.com",
+      "isActive": true
+    },
+    {
+      "id": 5,
+      "name": "Calvin Klein",
+      "slug": "calvin-klein",
+      "logo": "https://i.imgur.com/calvin-klein-logo.png",
+      "description": "American fashion brand",
+      "website": "https://calvinklein.com",
+      "isActive": true
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "T-shirt with Tape Details",
+      "slug": "t-shirt-with-tape-details",
+      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "shortDescription": "Comfortable graphic t-shirt with unique tape details",
+      "sku": "TSH-001",
+      "categoryId": 1,
+      "brandId": 2,
+      "price": 120,
+      "originalPrice": null,
+      "discount": 0,
+      "images": ["https://i.imgur.com/tshirt-tape-1.jpg", "https://i.imgur.com/tshirt-tape-2.jpg", "https://i.imgur.com/tshirt-tape-3.jpg"],
+      "thumbnail": "https://i.imgur.com/tshirt-tape-1.jpg",
+      "colors": [
+        { "name": "Black", "code": "#000000", "image": "https://i.imgur.com/tshirt-tape-black.jpg" },
+        { "name": "White", "code": "#FFFFFF", "image": "https://i.imgur.com/tshirt-tape-white.jpg" },
+        { "name": "Gray", "code": "#808080", "image": "https://i.imgur.com/tshirt-tape-gray.jpg" }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "stock": 50,
+      "rating": 4.5,
+      "reviewCount": 12,
+      "isNew": true,
+      "isFeatured": false,
+      "isActive": true,
+      "tags": ["casual", "comfortable", "cotton"],
+      "specifications": { "material": "100% Cotton", "fit": "Regular Fit", "care": "Machine wash cold", "origin": "Vietnam" },
+      "createdAt": "2024-06-01T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Skinny Fit Jeans",
+      "slug": "skinny-fit-jeans",
+      "description": "These jeans are crafted from premium denim with a comfortable stretch. Perfect for a modern, fitted look.",
+      "shortDescription": "Premium skinny fit jeans with stretch comfort",
+      "sku": "JNS-001",
+      "categoryId": 2,
+      "brandId": 2,
+      "price": 240,
+      "originalPrice": 260,
+      "discount": 20,
+      "images": ["https://i.imgur.com/skinny-jeans-1.jpg", "https://i.imgur.com/skinny-jeans-2.jpg", "https://i.imgur.com/skinny-jeans-3.jpg"],
+      "thumbnail": "https://i.imgur.com/skinny-jeans-1.jpg",
+      "colors": [
+        { "name": "Dark Blue", "code": "#1e3a8a", "image": "https://i.imgur.com/jeans-dark-blue.jpg" },
+        { "name": "Light Blue", "code": "#3b82f6", "image": "https://i.imgur.com/jeans-light-blue.jpg" },
+        { "name": "Black", "code": "#000000", "image": "https://i.imgur.com/jeans-black.jpg" }
+      ],
+      "sizes": ["28", "30", "32", "34", "36", "38"],
+      "stock": 35,
+      "rating": 3.5,
+      "reviewCount": 8,
+      "isNew": true,
+      "isFeatured": false,
+      "isActive": true,
+      "tags": ["denim", "skinny", "stretch"],
+      "specifications": { "material": "98% Cotton, 2% Elastane", "fit": "Skinny Fit", "care": "Machine wash cold, hang dry", "origin": "Turkey" },
+      "createdAt": "2024-06-05T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Checkered Shirt",
+      "slug": "checkered-shirt",
+      "description": "A classic checkered shirt that combines timeless style with modern comfort. Perfect for both casual and semi-formal occasions.",
+      "shortDescription": "Classic checkered shirt for versatile styling",
+      "sku": "SHT-001",
+      "categoryId": 3,
+      "brandId": 3,
+      "price": 180,
+      "originalPrice": null,
+      "discount": 0,
+      "images": ["https://i.imgur.com/checkered-shirt-1.jpg", "https://i.imgur.com/checkered-shirt-2.jpg", "https://i.imgur.com/checkered-shirt-3.jpg"],
+      "thumbnail": "https://i.imgur.com/checkered-shirt-1.jpg",
+      "colors": [
+        { "name": "Red/Blue", "code": "#dc2626", "image": "https://i.imgur.com/checkered-red-blue.jpg" },
+        { "name": "Black/White", "code": "#000000", "image": "https://i.imgur.com/checkered-black-white.jpg" },
+        { "name": "Green/White", "code": "#16a34a", "image": "https://i.imgur.com/checkered-green-white.jpg" }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock": 28,
+      "rating": 4.5,
+      "reviewCount": 15,
+      "isNew": true,
+      "isFeatured": false,
+      "isActive": true,
+      "tags": ["checkered", "classic", "versatile"],
+      "specifications": { "material": "100% Cotton Flannel", "fit": "Regular Fit", "care": "Machine wash warm", "origin": "India" },
+      "createdAt": "2024-06-10T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Sleeve Striped T-shirt",
+      "slug": "sleeve-striped-t-shirt",
+      "description": "Trendy striped t-shirt with contrasting sleeve colors. Made from premium cotton for all-day comfort.",
+      "shortDescription": "Trendy striped t-shirt with contrast sleeves",
+      "sku": "TSH-002",
+      "categoryId": 1,
+      "brandId": 1,
+      "price": 130,
+      "originalPrice": 160,
+      "discount": 30,
+      "images": ["https://i.imgur.com/striped-tshirt-1.jpg", "https://i.imgur.com/striped-tshirt-2.jpg", "https://i.imgur.com/striped-tshirt-3.jpg"],
+      "thumbnail": "https://i.imgur.com/striped-tshirt-1.jpg",
+      "colors": [
+        { "name": "Orange/Black", "code": "#ea580c", "image": "https://i.imgur.com/striped-orange-black.jpg" },
+        { "name": "Blue/White", "code": "#2563eb", "image": "https://i.imgur.com/striped-blue-white.jpg" },
+        { "name": "Red/White", "code": "#dc2626", "image": "https://i.imgur.com/striped-red-white.jpg" }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "stock": 42,
+      "rating": 4.5,
+      "reviewCount": 22,
+      "isNew": true,
+      "isFeatured": true,
+      "isActive": true,
+      "tags": ["striped", "trendy", "cotton"],
+      "specifications": { "material": "100% Premium Cotton", "fit": "Regular Fit", "care": "Machine wash cold", "origin": "Vietnam" },
+      "createdAt": "2024-06-12T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 5,
+      "name": "Vertical Striped Shirt",
+      "slug": "vertical-striped-shirt",
+      "description": "Elegant vertical striped shirt perfect for business casual or smart casual occasions. Features premium fabric and modern fit.",
+      "shortDescription": "Elegant vertical striped shirt for smart occasions",
+      "sku": "SHT-002",
+      "categoryId": 3,
+      "brandId": 4,
+      "price": 212,
+      "originalPrice": 232,
+      "discount": 20,
+      "images": ["https://i.imgur.com/vertical-striped-1.jpg", "https://i.imgur.com/vertical-striped-2.jpg", "https://i.imgur.com/vertical-striped-3.jpg"],
+      "thumbnail": "https://i.imgur.com/vertical-striped-1.jpg",
+      "colors": [
+        { "name": "Green/White", "code": "#16a34a", "image": "https://i.imgur.com/vertical-green-white.jpg" },
+        { "name": "Blue/White", "code": "#2563eb", "image": "https://i.imgur.com/vertical-blue-white.jpg" },
+        { "name": "Black/White", "code": "#000000", "image": "https://i.imgur.com/vertical-black-white.jpg" }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock": 18,
+      "rating": 5,
+      "reviewCount": 9,
+      "isNew": false,
+      "isFeatured": true,
+      "isActive": true,
+      "tags": ["striped", "formal", "business"],
+      "specifications": { "material": "60% Cotton, 40% Polyester", "fit": "Slim Fit", "care": "Dry clean recommended", "origin": "Italy" },
+      "createdAt": "2024-05-15T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Courage Graphic T-shirt",
+      "slug": "courage-graphic-t-shirt",
+      "description": "Bold graphic t-shirt with inspirational message. Made from soft, breathable fabric for maximum comfort.",
+      "shortDescription": "Bold graphic t-shirt with inspirational design",
+      "sku": "TSH-003",
+      "categoryId": 1,
+      "brandId": 2,
+      "price": 145,
+      "originalPrice": null,
+      "discount": 0,
+      "images": ["https://i.imgur.com/courage-tshirt-1.jpg", "https://i.imgur.com/courage-tshirt-2.jpg", "https://i.imgur.com/courage-tshirt-3.jpg"],
+      "thumbnail": "https://i.imgur.com/courage-tshirt-1.jpg",
+      "colors": [
+        { "name": "Orange", "code": "#ea580c", "image": "https://i.imgur.com/courage-orange.jpg" },
+        { "name": "Black", "code": "#000000", "image": "https://i.imgur.com/courage-black.jpg" },
+        { "name": "White", "code": "#ffffff", "image": "https://i.imgur.com/courage-white.jpg" }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock": 33,
+      "rating": 4,
+      "reviewCount": 18,
+      "isNew": false,
+      "isFeatured": true,
+      "isActive": true,
+      "tags": ["graphic", "inspirational", "casual"],
+      "specifications": { "material": "100% Cotton", "fit": "Regular Fit", "care": "Machine wash cold", "origin": "Bangladesh" },
+      "createdAt": "2024-05-20T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 7,
+      "name": "Loose Fit Bermuda Shorts",
+      "slug": "loose-fit-bermuda-shorts",
+      "description": "Comfortable loose fit bermuda shorts perfect for summer days. Features relaxed fit and breathable fabric.",
+      "shortDescription": "Comfortable loose fit bermuda shorts for summer",
+      "sku": "SHT-003",
+      "categoryId": 4,
+      "brandId": 2,
+      "price": 80,
+      "originalPrice": null,
+      "discount": 0,
+      "images": ["https://i.imgur.com/bermuda-shorts-1.jpg", "https://i.imgur.com/bermuda-shorts-2.jpg", "https://i.imgur.com/bermuda-shorts-3.jpg"],
+      "thumbnail": "https://i.imgur.com/bermuda-shorts-1.jpg",
+      "colors": [
+        { "name": "Light Blue", "code": "#3b82f6", "image": "https://i.imgur.com/bermuda-light-blue.jpg" },
+        { "name": "Khaki", "code": "#a3a3a3", "image": "https://i.imgur.com/bermuda-khaki.jpg" },
+        { "name": "Navy", "code": "#1e3a8a", "image": "https://i.imgur.com/bermuda-navy.jpg" }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock": 25,
+      "rating": 3,
+      "reviewCount": 6,
+      "isNew": false,
+      "isFeatured": true,
+      "isActive": true,
+      "tags": ["shorts", "summer", "casual"],
+      "specifications": { "material": "100% Cotton", "fit": "Loose Fit", "care": "Machine wash warm", "origin": "China" },
+      "createdAt": "2024-05-25T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 8,
+      "name": "Faded Skinny Jeans",
+      "slug": "faded-skinny-jeans",
+      "description": "Stylish faded skinny jeans with vintage wash. Perfect combination of style and comfort with stretch denim.",
+      "shortDescription": "Stylish faded skinny jeans with vintage wash",
+      "sku": "JNS-002",
+      "categoryId": 2,
+      "brandId": 3,
+      "price": 210,
+      "originalPrice": null,
+      "discount": 0,
+      "images": ["https://i.imgur.com/faded-jeans-1.jpg", "https://i.imgur.com/faded-jeans-2.jpg", "https://i.imgur.com/faded-jeans-3.jpg"],
+      "thumbnail": "https://i.imgur.com/faded-jeans-1.jpg",
+      "colors": [
+        { "name": "Faded Blue", "code": "#6b7280", "image": "https://i.imgur.com/faded-blue.jpg" },
+        { "name": "Dark Faded", "code": "#374151", "image": "https://i.imgur.com/dark-faded.jpg" },
+        { "name": "Light Faded", "code": "#9ca3af", "image": "https://i.imgur.com/light-faded.jpg" }
+      ],
+      "sizes": ["28", "30", "32", "34", "36", "38"],
+      "stock": 31,
+      "rating": 4.5,
+      "reviewCount": 14,
+      "isNew": false,
+      "isFeatured": true,
+      "isActive": true,
+      "tags": ["jeans", "faded", "skinny"],
+      "specifications": { "material": "99% Cotton, 1% Elastane", "fit": "Skinny Fit", "care": "Machine wash cold, hang dry", "origin": "Turkey" },
+      "createdAt": "2024-05-30T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 9,
+      "name": "Gradient Graphic T-shirt",
+      "slug": "gradient-graphic-t-shirt",
+      "description": "Eye-catching gradient graphic t-shirt with modern artistic design. Soft fabric with vibrant colors that won't fade.",
+      "shortDescription": "Eye-catching gradient graphic t-shirt",
+      "sku": "TSH-004",
+      "categoryId": 1,
+      "brandId": 1,
+      "price": 145,
+      "originalPrice": null,
+      "discount": 0,
+      "images": ["https://i.imgur.com/gradient-tshirt-1.jpg", "https://i.imgur.com/gradient-tshirt-2.jpg", "https://i.imgur.com/gradient-tshirt-3.jpg"],
+      "thumbnail": "https://i.imgur.com/gradient-tshirt-1.jpg",
+      "colors": [
+        { "name": "Rainbow", "code": "#ff6b6b", "image": "https://i.imgur.com/gradient-rainbow.jpg" },
+        { "name": "Ocean", "code": "#4ecdc4", "image": "https://i.imgur.com/gradient-ocean.jpg" },
+        { "name": "Sunset", "code": "#ffd93d", "image": "https://i.imgur.com/gradient-sunset.jpg" }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "stock": 22,
+      "rating": 3.5,
+      "reviewCount": 10,
+      "isNew": false,
+      "isFeatured": false,
+      "isActive": true,
+      "tags": ["graphic", "gradient", "artistic"],
+      "specifications": { "material": "100% Premium Cotton", "fit": "Regular Fit", "care": "Machine wash cold, inside out", "origin": "Vietnam" },
+      "createdAt": "2024-04-15T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 10,
+      "name": "Polo with Tipping Details",
+      "slug": "polo-with-tipping-details",
+      "description": "Classic polo shirt with elegant tipping details on collar and cuffs. Premium pique cotton construction.",
+      "shortDescription": "Classic polo shirt with elegant tipping details",
+      "sku": "PLO-001",
+      "categoryId": 3,
+      "brandId": 5,
+      "price": 180,
+      "originalPrice": null,
+      "discount": 0,
+      "images": ["https://i.imgur.com/polo-tipping-1.jpg", "https://i.imgur.com/polo-tipping-2.jpg", "https://i.imgur.com/polo-tipping-3.jpg"],
+      "thumbnail": "https://i.imgur.com/polo-tipping-1.jpg",
+      "colors": [
+        { "name": "Burgundy", "code": "#7c2d12", "image": "https://i.imgur.com/polo-burgundy.jpg" },
+        { "name": "Navy", "code": "#1e3a8a", "image": "https://i.imgur.com/polo-navy.jpg" },
+        { "name": "White", "code": "#ffffff", "image": "https://i.imgur.com/polo-white.jpg" }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock": 27,
+      "rating": 4.5,
+      "reviewCount": 16,
+      "isNew": false,
+      "isFeatured": false,
+      "isActive": true,
+      "tags": ["polo", "classic", "tipping"],
+      "specifications": { "material": "100% Pique Cotton", "fit": "Regular Fit", "care": "Machine wash warm", "origin": "Portugal" },
+      "createdAt": "2024-04-20T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 11,
+      "name": "One Life Graphic T-shirt",
+      "slug": "one-life-graphic-t-shirt",
+      "description": "Inspirational graphic t-shirt with 'One Life' message. Made from premium soft cotton for ultimate comfort and style.",
+      "shortDescription": "Inspirational 'One Life' graphic t-shirt",
+      "sku": "TSH-005",
+      "categoryId": 1,
+      "brandId": 2,
+      "price": 260,
+      "originalPrice": 300,
+      "discount": 40,
+      "images": ["https://i.imgur.com/onelife-tshirt-1.jpg", "https://i.imgur.com/onelife-tshirt-2.jpg", "https://i.imgur.com/onelife-tshirt-3.jpg"],
+      "thumbnail": "https://i.imgur.com/onelife-tshirt-1.jpg",
+      "colors": [
+        { "name": "Army Green", "code": "#365314", "image": "https://i.imgur.com/onelife-green.jpg" },
+        { "name": "Black", "code": "#000000", "image": "https://i.imgur.com/onelife-black.jpg" },
+        { "name": "Navy", "code": "#1e3a8a", "image": "https://i.imgur.com/onelife-navy.jpg" }
+      ],
+      "sizes": ["S", "M", "L", "XL"],
+      "stock": 19,
+      "rating": 4.5,
+      "reviewCount": 24,
+      "isNew": false,
+      "isFeatured": true,
+      "isActive": true,
+      "tags": ["graphic", "inspirational", "premium"],
+      "specifications": { "material": "100% Premium Cotton", "fit": "Regular Fit", "care": "Machine wash cold", "origin": "USA" },
+      "createdAt": "2024-03-10T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": 12,
+      "name": "Black Striped T-shirt",
+      "slug": "black-striped-t-shirt",
+      "description": "Classic black and white striped t-shirt with modern cut. Versatile piece that pairs well with any outfit.",
+      "shortDescription": "Classic black and white striped t-shirt",
+      "sku": "TSH-006",
+      "categoryId": 1,
+      "brandId": 2,
+      "price": 120,
+      "originalPrice": 160,
+      "discount": 40,
+      "images": ["https://i.imgur.com/black-striped-1.jpg", "https://i.imgur.com/black-striped-2.jpg", "https://i.imgur.com/black-striped-3.jpg"],
+      "thumbnail": "https://i.imgur.com/black-striped-1.jpg",
+      "colors": [
+        { "name": "Black/White", "code": "#000000", "image": "https://i.imgur.com/black-striped-bw.jpg" },
+        { "name": "Red/White", "code": "#dc2626", "image": "https://i.imgur.com/black-striped-rw.jpg" }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "stock": 60,
+      "rating": 4.5,
+      "reviewCount": 35,
+      "isNew": false,
+      "isFeatured": false,
+      "isActive": true,
+      "tags": ["striped", "classic", "casual"],
+      "specifications": { "material": "100% Cotton", "fit": "Regular Fit", "care": "Machine wash cold", "origin": "Vietnam" },
+      "createdAt": "2024-04-01T00:00:00Z",
+      "updatedAt": "2024-06-20T00:00:00Z"
     }
   ],
   "reviews": [
     {
       "id": 1,
-      "carId": 1,
+      "productId": 11,
       "userId": 2,
-      "rating": 4.5,
-      "title": "Rất hài lòng với bản Hybrid",
-      "comment": "Xe đi trong phố cực kỳ êm và tiết kiệm xăng. Cảm giác lái tốt, tuy nhiên tăng tốc trên cao tốc hơi yếu một chút. Nói chung là một chiếc xe tuyệt vời cho gia đình.",
-      "createdAt": "2025-05-20T10:30:00Z"
+      "rating": 5,
+      "comment": "Chất lượng áo thật tuyệt vời, vải mềm và mát. Họa tiết in rất đẹp và sắc nét. Rất hài lòng!",
+      "createdAt": "2024-06-20T10:00:00Z"
     },
     {
       "id": 2,
-      "carId": 3,
-      "userId": 2,
-      "rating": 5,
-      "title": "Xe điện thực sự khác biệt!",
-      "comment": "Trải nghiệm lái VF 8 rất thú vị, xe tăng tốc nhanh và mượt. Các tính năng thông minh hoạt động tốt. Chi phí vận hành rẻ hơn xe xăng nhiều.",
-      "createdAt": "2025-06-15T14:00:00Z"
-    }
-  ],
-  "blogPosts": [
+      "productId": 11,
+      "userId": 3,
+      "rating": 4,
+      "comment": "Áo đẹp, form chuẩn. Giao hàng nhanh. Sẽ ủng hộ shop tiếp.",
+      "createdAt": "2024-06-21T11:30:00Z"
+    },
     {
-      "id": 1,
-      "userId": 1,
-      "title": "5 Lý do nên chọn xe SUV cho gia đình Việt",
-      "content": "Xe SUV ngày càng trở nên phổ biến tại Việt Nam nhờ vào... (Nội dung bài viết ở đây, có thể dùng Markdown)... 1. Không gian rộng rãi 2. Gầm cao, linh hoạt...",
-      "imageUrl": "https://i.imgur.com/abcde1.png",
-      "tags": ["kinh nghiệm", "SUV", "tư vấn"],
-      "createdAt": "2025-06-01T09:00:00Z"
+      "id": 3,
+      "productId": 2,
+      "userId": 2,
+      "rating": 3,
+      "comment": "Quần jeans form skinny hơi chật so với size mình hay mặc. Chất vải thì co giãn tốt. Nên cân nhắc chọn lớn hơn 1 size.",
+      "createdAt": "2024-06-18T14:00:00Z"
+    },
+    {
+      "id": 4,
+      "productId": 5,
+      "userId": 3,
+      "rating": 5,
+      "comment": "Áo sơ mi rất đẹp, mặc lên trông lịch sự. Chất liệu vải tốt, không bị nhăn nhiều sau khi giặt.",
+      "createdAt": "2024-06-15T09:45:00Z"
     }
   ]
 }
