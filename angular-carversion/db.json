@@ -1,0 +1,177 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "Toyota",
+      "logoUrl": "https://i.imgur.com/4a2y1tO.png",
+      "country": "Nhật Bản",
+      "foundedYear": 1937,
+      "description": "Toyota Motor Corporation là một nhà sản xuất ô tô đa quốc gia của Nhật Bản có trụ sở tại Toyota, Aichi, Nhật Bản. Toyota là nhà sản xuất ô tô lớn nhất thế giới vào năm 2022."
+    },
+    {
+      "id": 2,
+      "name": "Ford",
+      "logoUrl": "https://i.imgur.com/lRLiA5p.png",
+      "country": "Hoa Kỳ",
+      "foundedYear": 1903,
+      "description": "Ford Motor Company là một nhà sản xuất ô tô đa quốc gia của Mỹ, có trụ sở chính tại Dearborn, Michigan. Công ty được thành lập bởi Henry Ford và được hợp nhất vào ngày 16 tháng 6 năm 1903."
+    },
+    {
+      "id": 3,
+      "name": "VinFast",
+      "logoUrl": "https://i.imgur.com/u1s35bY.png",
+      "country": "Việt Nam",
+      "foundedYear": 2017,
+      "description": "VinFast là một công ty sản xuất ô tô và xe máy điện của Việt Nam được thành lập vào năm 2017 tại Hải Phòng, trực thuộc tập đoàn Vingroup. VinFast đang tiên phong trong cuộc cách mạng xe điện toàn cầu."
+    },
+    {
+      "id": 4,
+      "name": "Hyundai",
+      "logoUrl": "https://i.imgur.com/5D6Yd0C.png",
+      "country": "Hàn Quốc",
+      "foundedYear": 1967,
+      "description": "Hyundai Motor Company là một nhà sản xuất ô tô đa quốc gia của Hàn Quốc có trụ sở tại Seoul. Hyundai là một trong những thương hiệu ô tô phổ biến nhất tại Việt Nam với nhiều mẫu xe đa dạng."
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "modelName": "Corolla Cross",
+      "brandId": 1,
+      "year": 2023,
+      "carType": "SUV",
+      "thumbnailUrl": "https://i.imgur.com/mANa7D7.png",
+      "images": ["https://i.imgur.com/mANa7D7.png", "https://i.imgur.com/sYvjUqR.png", "https://i.imgur.com/O8qG2vT.png"],
+      "description": "Toyota Corolla Cross là mẫu xe SUV đô thị cỡ nhỏ, kết hợp sự linh hoạt trong thành phố và không gian rộng rãi của một chiếc SUV. Xe nổi bật với thiết kế hiện đại, trang bị an toàn tiên tiến và phiên bản Hybrid tiết kiệm nhiên liệu.",
+      "specifications": {
+        "engine": "1.8L Xăng / 1.8L Hybrid",
+        "horsepower": "138 hp",
+        "torque": "172 Nm",
+        "transmission": "CVT",
+        "driveTrain": "Cầu trước (FWD)",
+        "dimensions": "4,460 x 1,825 x 1,620 mm",
+        "fuelConsumption": "7.6 L/100km (Máy xăng) - 4.2 L/100km (Hybrid)"
+      },
+      "price": {
+        "base": 760000000,
+        "currency": "VND"
+      }
+    },
+    {
+      "id": 2,
+      "modelName": "Ranger",
+      "brandId": 2,
+      "year": 2024,
+      "carType": "Bán tải (Pickup)",
+      "thumbnailUrl": "https://i.imgur.com/1BqjZc5.png",
+      "images": ["https://i.imgur.com/1BqjZc5.png", "https://i.imgur.com/qE9YfKJ.png"],
+      "description": "Ford Ranger, mệnh danh là 'Vua bán tải', là mẫu xe bán tải mạnh mẽ và đa dụng. Với thiết kế cơ bắp, khả năng vận hành vượt trội trên mọi địa hình và nội thất tiện nghi, Ranger là lựa chọn hàng đầu trong phân khúc.",
+      "specifications": {
+        "engine": "2.0L Single-Turbo / 2.0L Bi-Turbo Diesel",
+        "horsepower": "170 hp / 210 hp",
+        "torque": "405 Nm / 500 Nm",
+        "transmission": "Số sàn 6 cấp / Tự động 10 cấp",
+        "driveTrain": "Hai cầu (4x4)",
+        "dimensions": "5,362 x 1,918 x 1,875 mm",
+        "fuelConsumption": "8.5 L/100km"
+      },
+      "price": {
+        "base": 669000000,
+        "currency": "VND"
+      }
+    },
+    {
+      "id": 3,
+      "modelName": "VF 8",
+      "brandId": 3,
+      "year": 2023,
+      "carType": "SUV",
+      "thumbnailUrl": "https://i.imgur.com/w4J0G0B.png",
+      "images": ["https://i.imgur.com/w4J0G0B.png", "https://i.imgur.com/fH6T7gE.png"],
+      "description": "VinFast VF 8 là mẫu SUV điện thông minh toàn cầu, mang đến trải nghiệm lái xe điện cao cấp. Xe sở hữu thiết kế tương lai, công nghệ trợ lái tiên tiến (ADAS), và hiệu suất vận hành ấn tượng từ động cơ điện.",
+      "specifications": {
+        "engine": "Động cơ điện (1 hoặc 2 Motor)",
+        "horsepower": "201 hp (Eco) / 402 hp (Plus)",
+        "torque": "310 Nm / 620 Nm",
+        "transmission": "Tự động 1 cấp",
+        "driveTrain": "Cầu sau (RWD) / Hai cầu (AWD)",
+        "dimensions": "4,750 x 1,934 x 1,667 mm",
+        "range": "Lên đến 471 km / 1 lần sạc"
+      },
+      "price": {
+        "base": 1090000000,
+        "currency": "VND"
+      }
+    },
+    {
+      "id": 4,
+      "modelName": "Accent",
+      "brandId": 4,
+      "year": 2024,
+      "carType": "Sedan",
+      "thumbnailUrl": "https://i.imgur.com/zWk9N7k.png",
+      "images": ["https://i.imgur.com/zWk9N7k.png", "https://i.imgur.com/3p8YhF2.png"],
+      "description": "Hyundai Accent là mẫu sedan hạng B được ưa chuộng hàng đầu tại Việt Nam nhờ thiết kế trẻ trung, năng động, không gian nội thất rộng rãi và nhiều trang bị tiện nghi hiện đại trong tầm giá.",
+      "specifications": {
+        "engine": "1.5L Xăng Smartstream G",
+        "horsepower": "115 hp",
+        "torque": "144 Nm",
+        "transmission": "Số sàn 6 cấp / iVT",
+        "driveTrain": "Cầu trước (FWD)",
+        "dimensions": "4,535 x 1,765 x 1,485 mm",
+        "fuelConsumption": "6.2 L/100km"
+      },
+      "price": {
+        "base": 439000000,
+        "currency": "VND"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "staff@carvision.com",
+      "username": "AdminVision",
+      "password": "hashed_password_for_staff",
+      "role": "staff"
+    },
+    {
+      "id": 2,
+      "email": "user@example.com",
+      "username": "BaoTranAuto",
+      "password": "hashed_password_for_user",
+      "role": "user"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "carId": 1,
+      "userId": 2,
+      "rating": 4.5,
+      "title": "Rất hài lòng với bản Hybrid",
+      "comment": "Xe đi trong phố cực kỳ êm và tiết kiệm xăng. Cảm giác lái tốt, tuy nhiên tăng tốc trên cao tốc hơi yếu một chút. Nói chung là một chiếc xe tuyệt vời cho gia đình.",
+      "createdAt": "2025-05-20T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "carId": 3,
+      "userId": 2,
+      "rating": 5,
+      "title": "Xe điện thực sự khác biệt!",
+      "comment": "Trải nghiệm lái VF 8 rất thú vị, xe tăng tốc nhanh và mượt. Các tính năng thông minh hoạt động tốt. Chi phí vận hành rẻ hơn xe xăng nhiều.",
+      "createdAt": "2025-06-15T14:00:00Z"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "5 Lý do nên chọn xe SUV cho gia đình Việt",
+      "content": "Xe SUV ngày càng trở nên phổ biến tại Việt Nam nhờ vào... (Nội dung bài viết ở đây, có thể dùng Markdown)... 1. Không gian rộng rãi 2. Gầm cao, linh hoạt...",
+      "imageUrl": "https://i.imgur.com/abcde1.png",
+      "tags": ["kinh nghiệm", "SUV", "tư vấn"],
+      "createdAt": "2025-06-01T09:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<header>
+    <div class="nav-container">
+        <div class="logo">LOGO</div>
+        <button class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">&#9776;</button>
+        <ul [class.open]="isMenuOpen">
+            <li><a [routerLink]="['/']">Home</a></li>
+            <li><a [routerLink]="['admin/product-add']">Them san pham</a></li>
+            <li><a [routerLink]="['register']">Register</a></li>
+            <li><a [routerLink]="['/login']">Login</a></li>
+            <li><button (click)="logout()">Logout</button></li>
+        </ul>
+    </div>
+</header>
+
+
+
+<router-outlet></router-outlet>
