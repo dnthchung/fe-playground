@@ -1,1 +1,50 @@
-<p>product-card works!</p>
+<div class="bg-white rounded-lg overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow duration-300">
+    <!-- Product Image -->
+    <div class="relative overflow-hidden bg-gray-100 rounded-lg aspect-square">
+        <img [src]="product.thumbnail" [alt]="product.name"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+
+        <!-- New Badge -->
+        <div *ngIf="product.isNew"
+            class="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">
+            NEW
+        </div>
+
+        <!-- Discount Badge -->
+        <div *ngIf="getDiscountPercentage() > 0"
+            class="absolute top-2 right-2 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded">
+            -{{getDiscountPercentage()}}%
+        </div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="p-4">
+        <!-- Product Name -->
+        <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-gray-700">
+            {{product.name}}
+        </h3>
+
+        <!-- Rating -->
+        <div class="flex items-center mb-2">
+            <div class="flex items-center">
+                <span *ngFor="let star of getStarArray(product.rating)" class="text-yellow-400 text-sm">
+                    {{star === 1 ? '★' : '☆'}}
+                </span>
+            </div>
+            <span class="text-sm text-gray-500 ml-1">
+                {{product.rating}}/5 ({{product.reviewCount}})
+            </span>
+        </div>
+
+        <!-- Price -->
+        <div class="flex items-center gap-2">
+            <span class="text-lg font-bold text-gray-900">
+                ${{product.price}}
+            </span>
+            <span *ngIf="product.originalPrice && product.originalPrice > product.price"
+                class="text-sm text-gray-500 line-through">
+                ${{product.originalPrice}}
+            </span>
+        </div>
+    </div>
+</div>

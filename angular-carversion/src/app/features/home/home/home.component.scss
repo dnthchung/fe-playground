@@ -1,0 +1,28 @@
+// Hero section background gradient
+.hero-bg {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+// Product card hover effects
+.product-card {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Brand section styling
+.brand-section {
+  background: linear-gradient(90deg, #000000 0%, #434343 100%);
+}
+
+// Custom button styles
+.btn-primary {
+  @apply bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105;
+}
+
+.btn-secondary {
+  @apply border border-gray-300 text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-all duration-300;
+}

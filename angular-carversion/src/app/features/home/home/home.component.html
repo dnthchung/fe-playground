@@ -1,19 +1,122 @@
-<div class="container mx-auto py-8">
-    <h1 class="text-3xl font-bold mb-4">🚗 CarVision</h1>
-    <p class="text-lg mb-6">Nền tảng tra cứu & đánh giá xe hơi từ cộng đồng.</p>
+<!-- Loading state -->
+<div *ngIf="isLoading" class="flex items-center justify-center min-h-screen">
+    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+</div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="p-4 border rounded shadow">
-            <h2 class="text-xl font-semibold">🚙 Toyota Vios</h2>
-            <p>Loại: Sedan • Năm: 2023</p>
+<!-- Main content -->
+<div *ngIf="!isLoading">
+    <!-- Hero Section -->
+    <section class="relative bg-gray-100 overflow-hidden">
+        <div class="container mx-auto px-4 py-16 lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-6 lg:space-y-8">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        FIND CLOTHES<br>
+                        THAT MATCHES<br>
+                        YOUR STYLE
+                    </h1>
+
+                    <p class="text-gray-600 text-lg max-w-md">
+                        Browse through our diverse range of meticulously crafted garments, designed to bring out your
+                        individuality and cater to your sense of style.
+                    </p>
+
+                    <button
+                        class="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-colors duration-300">
+                        Shop Now
+                    </button>
+
+                    <!-- Stats -->
+                    <div class="flex flex-wrap gap-8 pt-8">
+                        <div class="text-center">
+                            <div class="text-2xl lg:text-3xl font-bold text-gray-900">200+</div>
+                            <div class="text-gray-600 text-sm">International Brands</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl lg:text-3xl font-bold text-gray-900">2,000+</div>
+                            <div class="text-gray-600 text-sm">High-Quality Products</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl lg:text-3xl font-bold text-gray-900">30,000+</div>
+                            <div class="text-gray-600 text-sm">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Fashion couple" class="w-full h-auto rounded-lg shadow-2xl">
+                    </div>
+
+                    <!-- Decorative elements -->
+                    <div
+                        class="absolute top-10 right-10 w-16 h-16 bg-black transform rotate-12 rounded-full opacity-20">
+                    </div>
+                    <div
+                        class="absolute bottom-10 left-10 w-12 h-12 bg-gray-800 transform -rotate-12 rounded-full opacity-30">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="p-4 border rounded shadow">
-            <h2 class="text-xl font-semibold">🚙 Honda CR-V</h2>
-            <p>Loại: SUV • Năm: 2022</p>
+    </section>
+
+    <!-- Brands Section -->
+    <app-brand-row [brands]="brands"></app-brand-row>
+
+    <!-- NEW ARRIVALS Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-12">
+                NEW ARRIVALS
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <app-product-card *ngFor="let product of newArrivals" [product]="product">
+                </app-product-card>
+            </div>
+
+            <div class="text-center">
+                <button
+                    class="border border-gray-300 text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors duration-300">
+                    View All
+                </button>
+            </div>
         </div>
-        <div class="p-4 border rounded shadow">
-            <h2 class="text-xl font-semibold">🚙 KIA Morning</h2>
-            <p>Loại: Hatchback • Năm: 2021</p>
+    </section>
+
+    <!-- Divider -->
+    <hr class="border-gray-200">
+
+    <!-- TOP SELLING Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-12">
+                TOP SELLING
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <app-product-card *ngFor="let product of topSelling" [product]="product">
+                </app-product-card>
+            </div>
+
+            <div class="text-center">
+                <button
+                    class="border border-gray-300 text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors duration-300">
+                    View All
+                </button>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- BROWSE BY DRESS STYLE Section -->
+    <app-dress-style></app-dress-style>
+
+    <!-- CUSTOMER REVIEWS Section -->
+    <app-customer-review></app-customer-review>
+
+    <!-- Newsletter Section -->
+    <app-newsletter></app-newsletter>
 </div>
