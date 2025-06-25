@@ -1,42 +1,47 @@
-// src/app/models/product.model.ts
+// src/app/core/models/product.model.ts
 
-export interface ProductColor {
-  name: string
-  code: string
-  image: string
+export interface ProductDimensions {
+  width: number
+  height: number
+  depth: number
 }
 
-export interface ProductSpecification {
-  material: string
-  fit: string
-  care: string
-  origin: string
+export interface ProductReview {
+  rating: number
+  comment: string
+  date: string
+  reviewerName: string
+  reviewerEmail: string
+}
+
+export interface ProductMeta {
+  createdAt: string
+  updatedAt: string
+  barcode?: string
+  qrCode?: string
 }
 
 export interface Product {
   id: number
-  name: string
-  slug: string
+  title: string
   description: string
-  shortDescription: string
-  sku: string
-  categoryId: number
-  brandId: number
+  category: string
   price: number
-  originalPrice: number | null
-  discount: number
-  images: string[]
-  thumbnail: string
-  colors: ProductColor[]
-  sizes: string[]
-  stock: number
+  discountPercentage: number
   rating: number
-  reviewCount: number
-  isNew: boolean
-  isFeatured: boolean
-  isActive: boolean
+  stock: number
   tags: string[]
-  specifications?: ProductSpecification
-  createdAt: string // Hoặc kiểu Date
-  updatedAt: string // Hoặc kiểu Date
+  brand: string
+  sku: string
+  weight: number
+  dimensions: ProductDimensions
+  warrantyInformation: string
+  shippingInformation: string
+  availabilityStatus?: string
+  thumbnail: string
+  images: string[]
+  reviews?: ProductReview[]
+  returnPolicy?: string
+  minimumOrderQuantity?: number
+  meta?: ProductMeta
 }

@@ -1,0 +1,22 @@
+<section class="home-container">
+    <h1>Sản phẩm nổi bật</h1>
+
+    <div *ngIf="isLoading">Đang tải dữ liệu...</div>
+
+    <div *ngIf="!isLoading && products.length > 0">
+        <div class="product-grid">
+            <div *ngFor="let product of products" class="product-card">
+                <img [src]="product.thumbnail" [alt]="product.title" />
+                <h2>{{ product.title }}</h2>
+                <p>{{ product.description }}</p>
+                <p class="text-green-600 font-semibold">
+                    {{ product.price | currency:'USD':'symbol':'1.2-2' }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!isLoading && products.length === 0">
+        Không có sản phẩm nào.
+    </div>
+</section>
