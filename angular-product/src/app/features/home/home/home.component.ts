@@ -2,11 +2,12 @@ import { Product } from "@/app/core/models/product.model"
 import { ProductResponse, ProductService } from "@/app/core/services/product.service"
 import { CommonModule } from "@angular/common"
 import { Component, OnInit } from "@angular/core"
+import { RouterLink } from "@angular/router"
 
 @Component({
   selector: "app-home",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
 })

@@ -1,1 +1,107 @@
-<p>product-detail works!</p>
+<div class="page-container">
+    <section *ngIf="isLoading" class="loading-container">
+        <div class="spinner"></div>
+        <p>Đang tải sản phẩm...</p>
+    </section>
+
+    <section *ngIf="error" class="error-container">
+        <h2>Rất tiếc, đã có lỗi xảy ra</h2>
+        <p>{{ error }}</p>
+        <a routerLink="/" class="back-home-btn">Quay về trang chủ</a>
+    </section>
+
+    <main *ngIf="!isLoading && product" class="product-detail-container">
+        <aside class="product-gallery">
+            <div class="main-image-wrapper">
+                <img [src]="selectedImageUrl || product.thumbnail" [alt]="product.title" class="main-image">
+            </div>
+            <div class="thumbnail-list">
+                <img *ngFor="let image of product.images" [src]="image" [alt]="product.title + ' thumbnail'"
+                    class="thumbnail-item" [class.active]="image === selectedImageUrl" (click)="selectImage(image)">
+            </div>
+        </aside>
+
+        <section class="product-info">
+            <div class="product-header">
+                <span class="product-brand">{{ product.brand }}</span>
+                <h1 class="product-title">{{ product.title }}</h1>
+                <div class="product-rating-summary">
+                    <span class="stars" [style.--rating]="product.rating"></span>
+                    <span>{{ product.rating.toFixed(1) }} ({{ product.reviews?.length || 0 }} đánh giá)</span>
+                </div>
+            </div>
+
+            <div class="product-pricing-box">
+                <div class="price-container">
+                    <span class="current-price">{{ product.price | currency:'USD' }}</span>
+                    <span *ngIf="product.discountPercentage > 0" class="discount-badge">
+                        Tiết kiệm {{ product.discountPercentage | number:'1.0-0' }}%
+                    </span>
+                </div>
+                <div *ngIf="product.discountPercentage > 0" class="original-price-container">
+                    <span>Giá gốc: </span>
+                    <del>{{ (product.price / (1 - product.discountPercentage / 100)) | currency:'USD' }}</del>
+                </div>
+            </div>
+
+            <p class="product-short-description">{{ product.description }}</p>
+
+            <div class="stock-status" [ngClass]="{'in-stock': product.stock > 0, 'out-of-stock': product.stock === 0}">
+                <span class="dot"></span> {{ product.availabilityStatus }}
+            </div>
+
+            <div class="purchase-actions">
+                <div class="quantity-selector">
+                    <button (click)="updateQuantity(-1)">-</button>
+                    <input type="number" [value]="quantity" min="1" [max]="product.stock">
+                    <button (click)="updateQuantity(1)">+</button>
+                </div>
+                <button class="add-to-cart-btn" [disabled]="product.stock === 0">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="trust-badges">
+                <div>🚚 {{ product.shippingInformation }}</div>
+                <div>🛡️ {{ product.warrantyInformation }}</div>
+                <div>↩️ {{ product.returnPolicy }}</div>
+            </div>
+        </section>
+    </main>
+
+    <section *ngIf="!isLoading && product" class="product-details-tabs">
+        <nav class="tab-nav">
+            <button [class.active]="activeTab === 'description'" (click)="activeTab = 'description'">Mô tả</button>
+            <button [class.active]="activeTab === 'specs'" (click)="activeTab = 'specs'">Thông số kỹ thuật</button>
+            <button [class.active]="activeTab === 'reviews'" (click)="activeTab = 'reviews'">Đánh giá</button>
+        </nav>
+        <div class="tab-content">
+            <article *ngIf="activeTab === 'description'">{{ product.description }}</article>
+
+            <article *ngIf="activeTab === 'specs'">
+                <ul class="specs-list">
+                    <li><strong>SKU:</strong> {{ product.sku }}</li>
+                    <li><strong>Thương hiệu:</strong> {{ product.brand }}</li>
+                    <li><strong>Danh mục:</strong> {{ product.category }}</li>
+                    <li><strong>Cân nặng:</strong> {{ product.weight }}kg</li>
+                    <li><strong>Kích thước (cm):</strong> {{ product.dimensions.width }} x {{ product.dimensions.height
+                        }} x {{ product.dimensions.depth }}</li>
+                    <li><strong>Số lượng tối thiểu:</strong> {{ product.minimumOrderQuantity }}</li>
+                </ul>
+            </article>
+
+            <article *ngIf="activeTab === 'reviews'">
+                <div *ngIf="!product.reviews || product.reviews.length === 0">Chưa có đánh giá nào cho sản phẩm này.
+                </div>
+                <div class="review-list">
+                    <div *ngFor="let review of product.reviews" class="review-card">
+                        <div class="review-header">
+                            <strong class="reviewer-name">{{ review.reviewerName }}</strong>
+                            <div class="stars" [style.--rating]="review.rating"></div>
+                        </div>
+                        <p class="review-comment">"{{ review.comment }}"</p>
+                        <span class="review-date">{{ review.date | date:'dd/MM/yyyy' }}</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>

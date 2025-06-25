@@ -1,22 +1,55 @@
 <section class="home-container">
     <h1>Sản phẩm nổi bật</h1>
 
-    <div *ngIf="isLoading">Đang tải dữ liệu...</div>
-
-    <div *ngIf="!isLoading && products.length > 0">
-        <div class="product-grid">
-            <div *ngFor="let product of products" class="product-card">
-                <img [src]="product.thumbnail" [alt]="product.title" />
-                <h2>{{ product.title }}</h2>
-                <p>{{ product.description }}</p>
-                <p class="text-green-600 font-semibold">
-                    {{ product.price | currency:'USD':'symbol':'1.2-2' }}
-                </p>
-            </div>
+    <div *ngIf="isLoading" class="product-grid">
+        <div *ngFor="let i of [1,2,3,4]" class="product-card is-loading">
+            <div class="skeleton skeleton-image"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text short"></div>
+            <div class="skeleton skeleton-price"></div>
         </div>
     </div>
 
-    <div *ngIf="!isLoading && products.length === 0">
+    <div *ngIf="!isLoading && products.length > 0" class="product-grid">
+        <div *ngFor="let product of products" class="product-card">
+            <a [routerLink]="['/products', product.id]" class="product-link">
+                <div class="product-image-container">
+                    <img [src]="product.thumbnail" [alt]="product.title" class="product-image" loading="lazy" />
+
+                    <div *ngIf="product.discountPercentage > 0" class="discount-badge">
+                        -{{ product.discountPercentage | number:'1.0-0' }}%
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-brand">{{ product.brand }}</span>
+
+                    <h2 class="product-title">{{ product.title }}</h2>
+
+                    <div class="product-rating">
+                        <span class="stars" [style.--rating]="product.rating"></span>
+                        <span class="rating-value">({{ product.rating.toFixed(1) }})</span>
+                    </div>
+
+                    <div class="product-pricing">
+                        <span class="current-price">{{ product.price | currency:'USD' }}</span>
+                        <del *ngIf="product.discountPercentage > 0" class="original-price">
+                            {{ (product.price / (1 - product.discountPercentage / 100)) | currency:'USD' }}
+                        </del>
+                    </div>
+
+                    <div class="stock-status"
+                        [ngClass]="{'in-stock': product.stock > 10, 'low-stock': product.stock <= 10 && product.stock > 0, 'out-of-stock': product.stock === 0}">
+                        {{ product.availabilityStatus }}
+                    </div>
+                </div>
+            </a>
+
+            <button class="cta-button" [disabled]="product.stock === 0">Thêm vào giỏ</button>
+        </div>
+    </div>
+
+    <div *ngIf="!isLoading && products.length === 0" class="no-products">
         Không có sản phẩm nào.
     </div>
 </section>
