@@ -1,41 +1,18 @@
-import { Product } from "@/app/core/models/product.model"
-import { ProductResponse, ProductService } from "@/app/core/services/product.service"
-import { CommonModule } from "@angular/common"
-import { Component, OnInit } from "@angular/core"
+// src/app/features/home/home/home.component.ts
+
+import { Component } from "@angular/core"
 import { RouterLink } from "@angular/router"
 
 @Component({
   selector: "app-home",
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  // Chỉ cần RouterLink để nút "Khám phá" hoạt động
+  imports: [RouterLink],
   templateUrl: "./home.component.html",
-  styleUrl: "./home.component.scss",
+  styleUrls: ["./home.component.scss"], // Đảm bảo là styleUrls
 })
-export class HomeComponent implements OnInit {
-  products: Product[] = []
-  total = 0
-  page = 1
-  limit = 10
-  isLoading = false
-
-  constructor(private productService: ProductService) {}
-
-  ngOnInit(): void {
-    this.fetchProducts()
-  }
-
-  fetchProducts(): void {
-    this.isLoading = true
-    this.productService.getProducts(this.page, this.limit).subscribe({
-      next: (res: ProductResponse) => {
-        this.products = res.products
-        this.total = res.total
-        this.isLoading = false
-      },
-      error: (err) => {
-        console.error("Lỗi khi tải sản phẩm:", err)
-        this.isLoading = false
-      },
-    })
-  }
+export class HomeComponent {
+  // Không cần constructor, ngOnInit hay bất kỳ thuộc tính nào khác.
+  // Component này giờ chỉ chịu trách nhiệm hiển thị template tĩnh.
+  constructor() {}
 }

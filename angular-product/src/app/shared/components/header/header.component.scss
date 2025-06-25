@@ -1,0 +1,81 @@
+/* header.component.scss */
+:host {
+  --header-bg: #ffffff;
+  --header-text: #333;
+  --header-height: 70px;
+  --primary-color: #0066cc;
+  --header-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-header {
+  height: var(--header-height);
+  background-color: var(--header-bg);
+  box-shadow: var(--header-shadow);
+
+  // Quan trọng: giúp header luôn ở trên cùng khi cuộn trang
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--header-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-color);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover,
+    &.active-link {
+      color: var(--primary-color);
+    }
+
+    // Hiển thị gạch chân cho link đang active
+    &.active-link::after {
+      transform: scaleX(1);
+    }
+  }
+}

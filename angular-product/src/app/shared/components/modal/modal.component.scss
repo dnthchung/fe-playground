@@ -1,0 +1,96 @@
+/* modal.component.scss */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+:host {
+  // Biến cục bộ cho component
+  --modal-z-index: 1050;
+  --modal-bg: #ffffff;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --modal-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-overlay {
+  position: fixed; /* Quan trọng: để modal nổi lên trên mọi thứ */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--modal-z-index);
+
+  background-color: var(--overlay-bg);
+
+  // Dùng flexbox để căn giữa modal một cách hoàn hảo
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Animation khi xuất hiện
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background-color: var(--modal-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--modal-shadow);
+
+  // Kích thước của modal
+  width: 90%;
+  max-width: 600px; // Giới hạn chiều rộng tối đa
+
+  // Animation khi xuất hiện
+  animation: slideInUp 0.3s ease-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #343a40;
+    }
+  }
+}
+
+.modal-body {
+  // Thêm khoảng trống nếu cần
+  padding-top: 0.5rem;
+}
