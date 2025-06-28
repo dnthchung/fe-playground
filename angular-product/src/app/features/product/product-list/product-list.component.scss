@@ -1,31 +1,63 @@
-/* Thư mục src/app/your-component/your-component.scss */
+/* src/app/features/product/product-list/product-list.component.scss */
 
+// ---------------------------------------------------
+// BIẾN MÀU SẮC VÀ THUỘC TÍNH CHUNG
+// ---------------------------------------------------
 :host {
   --primary-color: #007bff;
   --text-color: #333;
   --muted-color: #6c757d;
   --accent-color: #ff4500;
   --star-color: #ffc107;
+  --success-color: #28a745;
+  --error-color: #dc3545;
   --border-color: #e9ecef;
   --card-bg: #ffffff;
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   --card-hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.home-container {
+// ---------------------------------------------------
+// LAYOUT CHÍNH CỦA TRANG
+// ---------------------------------------------------
+.product-list-container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
-  font-family: "Inter", sans-serif; /* Sử dụng một font hiện đại nếu có */
+  font-family: "Inter", sans-serif;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 
   h1 {
-    text-align: center;
-    margin-bottom: 2rem;
     font-size: 2.5rem;
     color: var(--text-color);
+    margin: 0;
+  }
+
+  .add-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: darken(#007bff, 10%);
+    }
   }
 }
 
+// ---------------------------------------------------
+// LƯỚI SẢN PHẨM VÀ THẺ SẢN PHẨM (CARD)
+// ---------------------------------------------------
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -110,7 +142,7 @@
   margin: 0 0 0.5rem 0;
   // Giới hạn 2 dòng để tránh thẻ quá dài
   display: -webkit-box;
-  line-clamp: 2;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -124,7 +156,7 @@
   margin-bottom: 0.75rem;
 
   .stars {
-    --percent: calc(var(--rating) / 5 * 100%);
+    --percent: calc(var(--rating, 0) / 5 * 100%);
     display: inline-block;
     font-size: 1.1rem;
     font-family: Times; // Dùng font có sẵn để tạo sao
@@ -172,7 +204,7 @@
   margin-bottom: auto; /* Đẩy nó lên trên nút CTA */
 
   &.in-stock {
-    color: #28a745;
+    color: var(--success-color);
     background-color: #e9f7ec;
   }
   &.low-stock {
@@ -180,7 +212,7 @@
     background-color: #fff8e1;
   }
   &.out-of-stock {
-    color: #dc3545;
+    color: var(--error-color);
     background-color: #fbebed;
   }
 }
@@ -209,7 +241,9 @@
   }
 }
 
-/* Kiểu cho skeleton loader */
+// ---------------------------------------------------
+// SKELETON LOADER (HIỆU ỨNG CHỜ TẢI)
+// ---------------------------------------------------
 .product-card.is-loading {
   .skeleton {
     background-color: #e0e0e0;
@@ -243,4 +277,92 @@
   100% {
     background-color: #e0e0e0;
   }
+}
+
+// ---------------------------------------------------
+// FORM THÊM SẢN PHẨM (TRONG MODAL)
+// ---------------------------------------------------
+.form-group {
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+
+    // Thêm viền đỏ khi trường không hợp lệ và đã được chạm vào
+    &.ng-invalid.ng-touched {
+      border-color: var(--error-color);
+    }
+  }
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 2rem;
+
+  button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+
+    &.btn-secondary {
+      background-color: #e9ecef;
+      color: #333;
+      &:hover {
+        background-color: darken(#e9ecef, 5%);
+      }
+    }
+
+    &.btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+
+      &:hover:not(:disabled) {
+        background-color: darken(#007bff, 10%);
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------
+// CÁC TRẠNG THÁI KHÁC (LỖI, RỖNG)
+// ---------------------------------------------------
+.error-container,
+.no-products {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--muted-color);
+  font-size: 1.2rem;
+  background-color: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: 12px;
 }

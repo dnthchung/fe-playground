@@ -1,8 +1,13 @@
-<section class="home-container">
-    <h1>Sản phẩm nổi bật</h1>
+<!-- src/app/features/product/product-list/product-list.component.html -->
+<section class="product-list-container">
+    <div class="header-section">
+        <h1>Danh sách sản phẩm</h1>
+        <button class="add-button" (click)="openModal()">Thêm sản phẩm</button>
+    </div>
 
+    <!-- Trạng thái Đang tải với Skeleton UI -->
     <div *ngIf="isLoading" class="product-grid">
-        <div *ngFor="let i of [1,2,3,4]" class="product-card is-loading">
+        <div *ngFor="let i of [1,2,3,4,5,6,7,8]" class="product-card is-loading">
             <div class="skeleton skeleton-image"></div>
             <div class="skeleton skeleton-text"></div>
             <div class="skeleton skeleton-text short"></div>
@@ -10,46 +15,86 @@
         </div>
     </div>
 
-    <div *ngIf="!isLoading && products.length > 0" class="product-grid">
-        <div *ngFor="let product of products" class="product-card">
-            <a [routerLink]="['/products', product.id]" class="product-link">
-                <div class="product-image-container">
-                    <img [src]="product.thumbnail" [alt]="product.title" class="product-image" loading="lazy" />
+    <!-- Hiển thị Lỗi -->
+    <div *ngIf="error" class="error-container">{{ error }}</div>
 
-                    <div *ngIf="product.discountPercentage > 0" class="discount-badge">
+    <!-- Hiển thị Lưới sản phẩm -->
+    <div *ngIf="!isLoading && !error && products.length > 0" class="product-grid">
+        <div *ngFor="let product of products" class="product-card">
+            <!-- Dùng routerLink an toàn vì id luôn có -->
+            <a [routerLink]="['/products', product.id ?? 0]" class="product-link">
+
+                <div class="product-image-container">
+                    <!-- SỬA 1: Thêm ảnh placeholder nếu product.thumbnail không tồn tại -->
+                    <img [src]="product.thumbnail ?? 'https://placehold.co/300x300/e9ecef/6c757d?text=No+Image'"
+                        [alt]="product.title" class="product-image" loading="lazy" />
+
+                    <!-- Điều kiện này đã an toàn, không cần sửa -->
+                    <div *ngIf="product.discountPercentage && product.discountPercentage > 0" class="discount-badge">
                         -{{ product.discountPercentage | number:'1.0-0' }}%
                     </div>
                 </div>
 
                 <div class="product-info">
-                    <span class="product-brand">{{ product.brand }}</span>
+                    <!-- SỬA 2: Chỉ hiển thị thương hiệu nếu có -->
+                    <span *ngIf="product.brand" class="product-brand">{{ product.brand }}</span>
 
                     <h2 class="product-title">{{ product.title }}</h2>
 
-                    <div class="product-rating">
+                    <!-- SỬA 3: (QUAN TRỌNG NHẤT) Chỉ hiển thị phần rating nếu product.rating tồn tại -->
+                    <div *ngIf="product.rating" class="product-rating">
                         <span class="stars" [style.--rating]="product.rating"></span>
                         <span class="rating-value">({{ product.rating.toFixed(1) }})</span>
                     </div>
 
                     <div class="product-pricing">
                         <span class="current-price">{{ product.price | currency:'USD' }}</span>
-                        <del *ngIf="product.discountPercentage > 0" class="original-price">
+                        <del *ngIf="product.discountPercentage && product.discountPercentage > 0"
+                            class="original-price">
                             {{ (product.price / (1 - product.discountPercentage / 100)) | currency:'USD' }}
                         </del>
                     </div>
 
-                    <div class="stock-status"
+                    <!-- SỬA 4: Chỉ hiển thị trạng thái kho nếu có -->
+                    <div *ngIf="product.availabilityStatus" class="stock-status"
                         [ngClass]="{'in-stock': product.stock > 10, 'low-stock': product.stock <= 10 && product.stock > 0, 'out-of-stock': product.stock === 0}">
                         {{ product.availabilityStatus }}
                     </div>
                 </div>
             </a>
 
-            <button class="cta-button" [disabled]="product.stock === 0">Thêm vào giỏ</button>
+            <!-- Điều kiện disabled này đã an toàn -->
+            <button class="cta-button" [disabled]="!product.stock || product.stock === 0">Thêm vào giỏ</button>
         </div>
     </div>
 
-    <div *ngIf="!isLoading && products.length === 0" class="no-products">
-        Không có sản phẩm nào.
+    <!-- Trạng thái không có sản phẩm -->
+    <div *ngIf="!isLoading && !error && products.length === 0" class="no-products">
+        Không có sản phẩm nào để hiển thị.
     </div>
 </section>
+
+<!-- MODAL THÊM SẢN PHẨM (Không thay đổi) -->
+<app-modal [isOpen]="isModalOpen" (close)="closeModal()">
+    <span modal-title>Thêm sản phẩm mới</span>
+    <form #addProductForm="ngForm" (ngSubmit)="onSubmit(addProductForm)">
+        <div class="form-group">
+            <label for="title">Tên sản phẩm</label>
+            <input type="text" id="title" name="title" [(ngModel)]="newProduct.title" required #titleInput="ngModel">
+            <div *ngIf="titleInput.invalid && titleInput.touched" class="error-message">
+                Tên sản phẩm là bắt buộc.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price">Giá</label>
+            <input type="number" id="price" name="price" [(ngModel)]="newProduct.price" required #priceInput="ngModel">
+            <div *ngIf="priceInput.invalid && priceInput.touched" class="error-message">
+                Giá là bắt buộc.
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="btn-secondary" (click)="closeModal()">Hủy</button>
+            <button type="submit" class="btn-primary" [disabled]="addProductForm.invalid">Lưu</button>
+        </div>
+    </form>
+</app-modal>

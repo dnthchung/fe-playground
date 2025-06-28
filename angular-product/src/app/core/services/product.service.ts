@@ -32,7 +32,7 @@ export class ProductService {
     return this.http.get<Product>(`${this.apiUrl}/${id}`)
   }
 
-  createProduct(product: Partial<Product>): Observable<Product> {
+  addProduct(product: Partial<Product>): Observable<Product> {
     return this.http.post<Product>(`${this.apiUrl}/add`, product)
   }
 
